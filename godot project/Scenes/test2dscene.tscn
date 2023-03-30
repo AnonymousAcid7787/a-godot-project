@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bppmr0m8ag8oq"]
+
+[ext_resource type="Texture2D" uid="uid://bx3tjej0316wp" path="res://Assets/Sprites/arrow.png" id="1_s7nlk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddvte"]
+size = Vector2(60, 24)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_ddvte")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_s7nlk")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
