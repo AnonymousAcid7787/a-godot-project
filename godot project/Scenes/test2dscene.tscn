@@ -1,13 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bppmr0m8ag8oq"]
+[gd_scene load_steps=5 format=3 uid="uid://bppmr0m8ag8oq"]
 
+[ext_resource type="Script" path="res://Assets/Scripts/PlayerMovement.cs" id="1_84311"]
 [ext_resource type="Texture2D" uid="uid://bx3tjej0316wp" path="res://Assets/Sprites/arrow.png" id="1_s7nlk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ddvte"]
 size = Vector2(60, 24)
 
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q2frr"]
+size = Vector2(10, 10)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_84311")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2(-2, 0)
@@ -17,3 +22,7 @@ shape = SubResource("RectangleShape2D_ddvte")
 texture = ExtResource("1_s7nlk")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-33, -36)
+texture = SubResource("PlaceholderTexture2D_q2frr")
