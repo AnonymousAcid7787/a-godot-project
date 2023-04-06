@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading;
 
 public partial class PlayerMovement : CharacterBody2D
 {
@@ -9,6 +10,21 @@ public partial class PlayerMovement : CharacterBody2D
     {
         Velocity = GetInput();
         MoveAndSlide();
+    }
+
+    public void TestThread() {
+        while(true) {
+            Thread.Sleep(1000);
+            GD.Print("Test thing");
+        }
+    }
+
+    public override void _Ready()
+    {
+        base._Ready();
+        ThreadStart threadStart = new ThreadStart(TestThread);
+        Thread thread = new Thread(threadStart);
+        thread.Start();
     }
 
     public Vector2 GetInput()

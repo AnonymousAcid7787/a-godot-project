@@ -5,6 +5,6 @@ public partial class PlayerDraw : Sprite2D
 {
     public override void _Draw()
     {
-        base._Draw();
+        // base._Draw();
     }
 }
