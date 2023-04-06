@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Movement : CharacterBody2D
+public partial class PlayerMovement : CharacterBody2D
 {
     [Export] public int walkSpeed = 200;
 
