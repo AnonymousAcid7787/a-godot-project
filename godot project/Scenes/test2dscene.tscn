@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bppmr0m8ag8oq"]
+[gd_scene load_steps=6 format=3 uid="uid://bppmr0m8ag8oq"]
 
 [ext_resource type="Script" path="res://Scenes/PlayerMovement.cs" id="1_n1gop"]
 [ext_resource type="Texture2D" uid="uid://bx3tjej0316wp" path="res://Assets/Sprites/arrow.png" id="1_s7nlk"]
+[ext_resource type="Script" path="res://Scenes/PlayerDraw.cs" id="3_dns27"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q2frr"]
 size = Vector2(10, 10)
@@ -25,5 +26,6 @@ shape = SubResource("RectangleShape2D_87xf7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
 texture = ExtResource("1_s7nlk")
+script = ExtResource("3_dns27")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
