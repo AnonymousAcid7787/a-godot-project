@@ -15,7 +15,6 @@ public partial class PlayerMovement : CharacterBody2D
     public void TestThread() {
         while(true) {
             Thread.Sleep(1000);
-            GD.Print("Test thing");
         }
     }
 
