@@ -6,8 +6,8 @@ public partial class TerrainGen : Node2D
     private float[,] noiseGrid;
     public override void _Draw()
     {
-        for(var y = 0; y < 20; y++) {
-            for(var x = 0; x < 20; x++) {
+        for(var y = 0; y < 128; y++) {
+            for(var x = 0; x < 128; x++) {
                 DrawRect(
                     new Rect2(
                         new Vector2(x*5, y*5),
@@ -20,7 +20,7 @@ public partial class TerrainGen : Node2D
     }
     public override void _Ready()
     {
-        noiseGrid = FractalNoise(0,0, 20,20, 1,100, 0.5f, 3, 2f, 0.2f);
+        noiseGrid = FractalNoise(0,0, 128,128, 1,100, 0.5f, 3, 2f, 0.2f);
 
         string gridStr = "";
         for(var y = 0; y < 20; y++) {
